@@ -2,9 +2,9 @@ package com.eafm.weather.module
 
 import android.arch.persistence.room.Room
 import com.eafm.weather.repository.Repository
-import com.eafm.weather.repository.WeatherRepository
 import com.eafm.weather.repository.client.WeatherApi
 import com.eafm.weather.repository.db.WeatherDatabase
+import com.eafm.weather.repository.impl.WeatherRepository
 import com.eafm.weather.viewmodel.WeatherViewModel
 import org.koin.android.architecture.ext.viewModel
 import org.koin.android.ext.koin.androidApplication
