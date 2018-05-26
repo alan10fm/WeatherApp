@@ -11,3 +11,6 @@ Libraries:
 - Dependency Injection - Koin https://insert-koin.io/
 - Http client - Retrofit 2 http://square.github.io/retrofit/
 - Image Loading - Picasso http://square.github.io/picasso/
+
+Demo:
+https://youtu.be/v6bRD8_K0J0
