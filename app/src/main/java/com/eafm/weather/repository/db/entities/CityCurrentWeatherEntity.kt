@@ -13,7 +13,8 @@ data class CityCurrentWeatherEntity(
     val main: String,
     val description: String,
     val icon: String,
-    val temperature: Double
+    val temperature: Double,
+    val errorCode: Int? = null
 )
 
 fun CityCurrentWeatherEntity.toObject() = CityCurrentWeather(
@@ -28,3 +29,6 @@ fun CityCurrentWeatherEntity.toObject() = CityCurrentWeather(
         )
     )
 )
+
+fun createErrorCityCurrentWeather(errorCode: Int) =
+    CityCurrentWeatherEntity(0, "", "", "", "", 0.0, errorCode)

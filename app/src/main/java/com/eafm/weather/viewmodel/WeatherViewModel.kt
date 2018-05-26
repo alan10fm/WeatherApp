@@ -7,4 +7,6 @@ class WeatherViewModel(private val repository: Repository) : ViewModel() {
 
     fun getCurrentWeather(cityName: String) = repository.getCurrentWeather(cityName)
 
+    fun getDailyForecast(cityName: String) = repository.getDailyForecast(cityName)
+
 }
