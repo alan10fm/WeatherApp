@@ -3,6 +3,7 @@ package com.eafm.weather.repository.db.entities
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
 import com.eafm.weather.model.*
+import java.util.*
 
 @Entity(tableName = "city_daily_forecast")
 data class CityDailyForecastEntity(
@@ -14,7 +15,8 @@ data class CityDailyForecastEntity(
     val icon: String,
     val minTemperature: Double,
     val maxTemperature: Double,
-    val time: Long
+    val time: Long,
+    val errorCode: Int? = null
 )
 
 fun CityDailyForecastEntity.toObject() = CityDailyForecast(
@@ -33,3 +35,12 @@ fun CityDailyForecastEntity.toObject() = CityDailyForecast(
         )
     )
 )
+
+fun createErrorCityDailyForecast(errorCode: Int) =
+    CityDailyForecastEntity(0, "", "", "", "", 0.0, 0.0, 0, errorCode)
+
+fun CityDailyForecastEntity.toDayOfWeek(): Int {
+    val cal = GregorianCalendar()
+    cal.time = Date(this.time * 1000)
+    return cal.get(Calendar.DAY_OF_WEEK)
+}

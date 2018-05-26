@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="min_label">Min: </string>
+    <string name="max_label">Max: </string>
+    <string name="monday">Monday"</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="no_network">Looks like you do not have network</string>
+    <string name="not_found">City not found</string>
+    <string name="unexpected_error">Oops!! this was not suppose to happen</string>
 </resources>
